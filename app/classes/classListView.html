@@ -1,0 +1,30 @@
+<div class="panel panel-browns">
+    <div class="panel-heading"
+         style="font-size:large">
+        User List
+    </div>
+
+    <div class="panel-body">
+        <table class="table">
+
+            <thead>
+            <tr>
+                <td>Name</td>
+                <td>Emai</td>
+                <td>City</td>
+                <td>Company</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="class in vm.classes">
+                 <td>{{class.firstName}}</td>
+                 <td>{{ class.email }}</td>
+                <td>{{ class.address["city"]}}</td>
+                <td>{{ class.company["name"]}}</td>
+                <td>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

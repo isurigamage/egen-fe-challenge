@@ -1,0 +1,84 @@
+<form class="form-horizontal"
+      name="classForm"
+      ng-submit="vm.submit(classForm.$valid)"
+      novalidate>
+
+    <fieldset>
+        <legend>New User</legend>
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="inputClassName">Name</label>
+
+            <div class="col-md-4">
+                <input class="form-control"
+                       id="inputFirstName"
+                       name="inputFirstName"
+                       type="text"
+                       placeholder="Name"
+                       ng-model="vm.class.firstName"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="inputEmail">Email</label>
+
+            <div class="col-md-4">
+                <input class="form-control"
+                       id="inputEmail"
+                       name="inputEmail"
+                       type="text"
+                       ng-model="vm.class.email"
+                       />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label"
+                   for="inputCity">City</label>
+
+            <div class="col-md-4">
+                <input class="form-control"
+                       id="inputCity"
+                       name="inputCity"
+                       type="text"
+                       ng-model="vm.class.address.city"
+                />
+            </div>
+        </div>
+        <div class="form-group">
+        <label class="col-md-2 control-label"
+               for="inputCompany">Company</label>
+
+        <div class="col-md-4">
+            <input class="form-control"
+                   id="inputCompany"
+                   name="inputCompany"
+                   type="text"
+                   ng-model="vm.class.company.name"
+            />
+        </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span>
+                    <button class="btn btn-browns"
+                            style="width:80px;margin-right:10px"
+                            type="submit"
+                            ng-disabled="classForm.$invalid">
+                        Save
+                    </button>
+                </span>
+                <span>
+                    <button class="btn btn-default"
+                            style="width:70px"
+                            type="button"
+                            ng-click="vm.cancel()">
+                        Cancel
+                    </button>
+                </span>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
